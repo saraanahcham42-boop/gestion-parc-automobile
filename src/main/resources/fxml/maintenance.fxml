@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionparc.ui.controller.MaintenanceController">
+    <top>
+        <VBox style="-fx-background-color: #2c3e50; -fx-padding: 15;">
+            <Label text="Gestion de la Maintenance" style="-fx-text-fill: white;" textAlignment="LEFT">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="10.0" style="-fx-padding: 15;">
+            <TableView fx:id="maintenanceTable" prefHeight="600.0" prefWidth="1170.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="100.0" text="ID" />
+                    <TableColumn fx:id="typeColumn" prefWidth="250.0" text="Type" />
+                    <TableColumn fx:id="coutColumn" prefWidth="150.0" text="Coût (€)" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="10.0" style="-fx-padding: 15;">
+            <Button fx:id="refreshButton" onAction="#handleRefresh" text="Rafraîchir" style="-fx-padding: 10;" />
+            <Button fx:id="backButton" onAction="#handleBack" text="Retour" style="-fx-padding: 10;" />
+        </HBox>
+    </bottom>
+</BorderPane>
